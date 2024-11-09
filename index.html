@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script id="script" src="nagui.js"></script>
+    <title>N'oubliez pas les Zythos !</title>
+</head>
+
+<body>
+    <main>
+        <h1>Me when Nagui</h1>
+        <img src="./images/nagui-surprise.gif">
+    </main>
+    <h2>Tu ne connais pas les zythos ?</h2>
+    <h3>Pas de panique ! On est là pour t'expliquer</h3>
+    <section class="paragraph">
+        <div>
+            <h4>Kézako ?</h4>
+            <p>
+                Les zythos, c'est quoi exactement ? Eh bien ce sont des soirées organisées tous les mercredis soir par
+                le BDE de l'ISEN ! <br>
+                Ça se déroule à la MI, dans le sous-sol de l'école, de <span class="important">17h30</span> à <span
+                    class="important">19h30</span>.
+            </p>
+        </div>
+        <img src="images/nagui-surprise.gif">
+    </section>
+    <section class="paragraph">
+        <div>
+            <h4>Et après ça ?</h4>
+            <p>
+                Tu te dis peut-être que 19h30 c'est tôt, mais pas de panique ! La soirée ne se termine pas parce que le
+                zytho est fini<br>
+                La plupart des étudiants se retrouvent au PDD, le bar juste à côté de l'ISEN, pour continuerla fête,
+                cette fois sans heure de fin !
+            </p>
+        </div>
+        <img src="images/nagui-surprise.gif">
+    </section>
+    <section class="paragraph">
+        <div>
+            <h4>Comment on y entre ?</h4>
+            <p>
+
+            </p>
+        </div>
+        <img src="images/nagui-surprise.gif">
+    </section>
+    <form id="enroll" class="glowingBox" onsubmit="event.preventDefault(); startGame();">
+        <div class="input-box">
+            <input type="text" name="subject" placeholder=" " required>
+            <label>Nom</label>
+        </div>
+        <div class="input-box">
+            <input type="text" name="subject" placeholder=" " required>
+            <label>Prénom</label>
+        </div>
+        <div class="check-wrapper">
+            <label class="check-box">
+                <input type="checkbox" name="accept">
+                <svg viewBox="0 -5 64 64" class="accept">
+                    <path
+                        d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16"
+                        pathLength="575.0541381835938" class="path">
+                    </path>
+                </svg>
+            </label>
+            <p>J'ai cotisé auprès du BDE</p>
+        </div>
+        <input type="submit" value="Inscription">
+    </form>
+    <div id="gameFrame">
+        <h3>Veuillez compléter cette courte vérification pour prouver que vous êtes bien humain</h3>
+        <h4 id="part">1/5</h4>
+        <h4>Temps restant : <span id="timer">0</span></h4>
+        <div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
