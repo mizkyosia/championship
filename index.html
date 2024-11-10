@@ -5,51 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script id="script" src="nagui.js"></script>
     <title>N'oubliez pas les Zythos !</title>
 </head>
 
 <body>
-    <main>
-        <h1>Me when Nagui</h1>
-        <img src="./images/nagui-surprise.gif">
-    </main>
-    <h2>Tu ne connais pas les zythos ?</h2>
-    <h3>Pas de panique ! On est là pour t'expliquer</h3>
-    <section class="paragraph">
-        <div>
-            <h4>Kézako ?</h4>
-            <p>
-                Les zythos, c'est quoi exactement ? Eh bien ce sont des soirées organisées tous les mercredis soir par
-                le BDE de l'ISEN ! <br>
-                Ça se déroule à la MI, dans le sous-sol de l'école, de <span class="important">17h30</span> à <span
-                    class="important">19h30</span>.
-            </p>
-        </div>
-        <img src="images/nagui-surprise.gif">
-    </section>
-    <section class="paragraph">
-        <div>
-            <h4>Et après ça ?</h4>
-            <p>
-                Tu te dis peut-être que 19h30 c'est tôt, mais pas de panique ! La soirée ne se termine pas parce que le
-                zytho est fini<br>
-                La plupart des étudiants se retrouvent au PDD, le bar juste à côté de l'ISEN, pour continuerla fête,
-                cette fois sans heure de fin !
-            </p>
-        </div>
-        <img src="images/nagui-surprise.gif">
-    </section>
-    <section class="paragraph">
-        <div>
-            <h4>Comment on y entre ?</h4>
-            <p>
-
-            </p>
-        </div>
-        <img src="images/nagui-surprise.gif">
-    </section>
-    <form id="enroll" class="glowingBox" onsubmit="event.preventDefault(); startGame();">
+    <h1>Inscription aux</h1>
+    <span id="zythos">Zythos</span>
+    <form id="enroll" class="glowingBox">
         <div class="input-box">
             <input type="text" name="subject" placeholder=" " required>
             <label>Nom</label>
@@ -70,7 +32,8 @@
             </label>
             <p>J'ai cotisé auprès du BDE</p>
         </div>
-        <input type="submit" value="Inscription">
+        <input type="submit" value="Inscription" id="auth" class="static">
+        <span id="placeholder">span</span>
     </form>
     <div id="gameFrame">
         <h3>Veuillez compléter cette courte vérification pour prouver que vous êtes bien humain</h3>
@@ -80,6 +43,7 @@
             
         </div>
     </div>
+    <script id="script" src="nagui.js"></script>
 </body>
 
 </html>

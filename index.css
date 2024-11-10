@@ -16,6 +16,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
     color: var(--color-accent-light);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -55,6 +56,29 @@ h1 {
 
 h1, h2, h3 {
     text-align: center;
+}
+
+@font-face {
+    font-family: "Vegan Style";
+    src:
+      local("Vegan Style"),
+      url(./fonts/VeganStylePersonalUse-5Y58.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: "Ananda Black";
+    src:
+      local("Ananda Black"),
+      url(./fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf) format("opentype")
+}
+  
+
+#zythos {
+    font-family:"Ananda Black";
+    color: white;
+    font-size: 12vh;
+    margin: 5%;
+    text-shadow: 0 0 35px var(--color-accent-lighter);
 }
 
 /* Input box */
@@ -149,31 +173,53 @@ form {
     border-radius: 15px;
     color: #5f5f5f;
     gap: .5rem;
-}
-
-/* Glow & blur effect */
-
-.glowingBox {
+    position:static;
     background-color: var(--color-input-bg);
-    padding: 10px;
-    margin: 15px;
-    position: relative;
-    transition: all .5s;
+    box-shadow: 0 0 45px -10px var(--color-accent-dark);
+    transition: box-shadow .3s;
 }
 
-.glowingBox::after {
-    content: "";
+form:hover {
+    box-shadow: 0 0 45px -5px var(--color-accent-light);
+}
+
+#auth {
     position: absolute;
-    inset: .5rem;
-    z-index: -12;
-    background-color: var(--color-accent-darker);
-    border-radius: inherit;
-    transition: all .5s;
-    filter: blur(2.5rem);
 }
 
-.glowingBox:hover::after {
-    background-color: var(--color-accent-light);
+#auth.static {
+    position:static;
+}
+
+#placeholder {
+    width: 0px;
+    overflow: hidden;
+    height: 5vh;
+}
+
+#endScreen {
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    padding: 5vh;
+    margin: auto;
+    border-radius: 4px;
+    border-radius: 15px;
+    background-color: var(--color-input-bg);
+    box-shadow:
+        0 0 45px var(--color-accent-normal);
+    transition: box-shadow .3s;
+}
+
+font {
+    text-shadow: 0 0 15px var(--color-accent-light);
+}
+
+#word {
+    color: white;
+    font-size: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 35px var(--color-accent-lighter);
 }
 
 /* Magic checkbox */
@@ -259,28 +305,6 @@ form {
     box-sizing: border-box;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .3s;
     background-color: var(--color-input-bg);
-    /* background-image:
-            radial-gradient(at 27% 73%,
-                rgba(0, 59, 18, 0.568) 0,
-                transparent 50%),
-            radial-gradient(at 100% 52%,
-                rgba(62, 42, 85, .37) 0,
-                transparent 50%),
-            radial-gradient(at 94% 93%,
-                hsla(12, 84%, 80%, .42) 0,
-                transparent 50%),
-            radial-gradient(at 35% 100%,
-                #573b78 0,
-                transparent 50%),
-            radial-gradient(at 79% 2%,
-                #7d59a6 0,
-                transparent 50%),
-            radial-gradient(at 0 20%,
-                rgba(236, 101, 70, .59) 0,
-                transparent 50%),
-            radial-gradient(at 80% 100%,
-                #3e2a55 0,
-                transparent 50%); */
 }
 
 #gameFrame .check-wrapper {
